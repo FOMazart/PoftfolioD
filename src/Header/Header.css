@@ -1,0 +1,33 @@
+.head div nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0F103F;
+}
+
+.head div nav ul li{
+    padding:  30px 35px;
+    height: 46px;
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+
+}
+
+.head div nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.head div nav ul li a:hover{
+    color: #FFD700;
+}   
+
+.logo{
+    width: 46px;
+    height: 46px;
+}

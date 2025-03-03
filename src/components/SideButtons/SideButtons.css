@@ -1,0 +1,83 @@
+.side-buttons {
+    position: fixed;
+    top: 45%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .side-buttons button {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background : none;
+    position: relative; /* Добавлено */
+    z-index: 1;        /* Добавлено */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.side-buttons div nav ul li button img {
+  filter: brightness(0); /* Иконки черные до нажатия */
+}
+
+.side-buttons nav ul li button img {
+  filter: brightness(0);
+  transition: filter 0.3s ease;
+}
+
+.side-buttons nav ul li button img.active-img {
+  filter: brightness(1);
+}
+
+.side-buttons nav ul li button {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.side-buttons nav ul li button::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    width: 3px;
+    height: 0;
+    background: linear-gradient(45deg, #C961DE, #2954A3);
+    transition: height 0.3s ease;
+}
+
+.side-buttons nav ul li button.active::after {
+    height: 100%;
+}
+
+.side-buttons nav ul li button:hover {
+    transform: translateX(5px);
+}
+
+.side-buttons nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  list-style-type: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.side-buttons nav {
+  background-color: rgba(255,255,255,0.6);
+  display: flex;
+  justify-content: center;
+  border-radius: 0 50px 50px 0;
+  padding: 60px 15px;
+  position: relative; /* Добавлено */
+  overflow: hidden;  /* Добавлено */
+}

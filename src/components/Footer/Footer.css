@@ -1,0 +1,90 @@
+.footer div nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0F103F;
+}
+
+.footer div nav ul li{
+    padding:  30px 35px;
+    height: 46px;
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+
+}
+.footer div nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer div nav ul li a:hover{
+    color: #FFD700;
+}   
+
+
+.footer-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 1rem;
+}
+.footer div nav ul:nth-child(2) {
+    padding: 0px;
+    margin: 0px;
+}
+.footer div nav ul:nth-child(2) li {
+    padding: 0px;
+    margin: 0px;
+}
+a {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+.footer {
+    position: relative;
+    background-color: #1C1C65;
+}
+.saturn-img {
+    position: absolute;
+    top: -100%;
+    left: 0;
+}
+.ring-img {
+    z-index: 0;
+}
+.orbit {
+    position: absolute;
+    bottom: -10px;
+    right: 180px;
+    height: 500px;
+    width: 100px;
+    transform-origin: top;
+    animation: orbitWithTilt 15s linear infinite;
+}
+.commet-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:rotate(15deg)
+}
+.jupiter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* Set container size for comet orbit */
+    overflow: hidden;
+}
+
+@keyframes orbitWithTilt {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

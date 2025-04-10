@@ -4,6 +4,14 @@ import './SideButtons.css';
 const SideButtons = () => {
   const [activeSection, setActiveSection] = useState('');
 
+  const icons = [
+    { id: 'home', icon: '../../assets/icons/home_icon.svg' },
+    { id: 'about', icon: '../../assets/icons/about_icon.svg' },
+    { id: 'work', icon: '../../assets/icons/work_icon.svg' },
+    { id: 'contact', icon: '../../assets/icons/contact_icon.svg' }
+  ];
+
+  
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'work', 'contact'];
@@ -39,12 +47,7 @@ const SideButtons = () => {
     <div className="side-buttons">
       <nav>
         <ul>
-          {[
-            { id: 'home', icon: '../../assets/icons/home_icon.svg' },
-            { id: 'about', icon: '../../assets/icons/about_icon.svg' },
-            { id: 'work', icon: '../../assets/icons/work_icon.svg' },
-            { id: 'contact', icon: '../../assets/icons/contact_icon.svg' }
-          ].map(({ id, icon }) => (
+          {icons.map(({ id, icon }) => (
             <li key={id}>
               <button 
                 onClick={() => scrollToSection(id)}
